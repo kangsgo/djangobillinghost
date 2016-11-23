@@ -1,0 +1,5 @@
+Django==1.8.4
+requests
+factory_boy
+coverage
+markdown

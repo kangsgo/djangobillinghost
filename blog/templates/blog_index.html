@@ -1,0 +1,47 @@
+ {% extends "base.html" %}
+{% block miaosu %}
+<section class="big-title">
+    <div class="container">
+        <div class="row row-xs-center">
+            <div class="col-xs-12 col-sm-6">
+                <h3>博客中心</h3>
+            </div>
+            <div class="col-xs-12 col-sm-6 text-sm-right">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block content %}
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+        <div class="row padding-100" style="width: 120%">
+
+<div class="col-md-2 col-sm-2">
+</div>
+             <div class="col-md-6 col-sm-6">
+             <div class="dione-list type1">
+                            <ul>
+                            {% for post in blog_list %}
+                                <li><a href="/blog/{{post.id}}">{{ post.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+  </div>
+
+             <div class="col-md-4 col-sm-4">
+
+                            <ul>
+                            {% for post in blog_list %}
+                                <li>{{ post.date_time }}</li>
+                                {% endfor %}
+                            </ul>
+
+  </div>
+
+       </div>
+    </div>
+</div>
+</div>
+{% endblock %}

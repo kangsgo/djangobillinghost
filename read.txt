@@ -1,0 +1,10 @@
+支付宝设置在mysite/accounts/views.py的164行
+sudo apt-get install pip
+pip install -r requirements.txt
+cd mysite 进入有manage.py的目录
+下面3步按照道理不需要设置的，但是为了安全我把我的数据库删除了，所以你要自己建数据库，按照下面3步，最后一步会要你输入管理员账号密码
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+
+部署方法：http://www.isaced.com/post-248.html

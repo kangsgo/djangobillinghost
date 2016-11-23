@@ -1,0 +1,64 @@
+ {% extends "base.html" %}
+
+{% block miaosu %}
+<section class="big-title">
+    <div class="container">
+        <div class="row row-xs-center">
+            <div class="col-xs-12 col-sm-6">
+                <h3>客户中心</h3>
+            </div>
+            <div class="col-xs-12 col-sm-6 text-sm-right">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+       <div class="row padding-100" style="width: 100%">
+            <div class="col-sm-6">
+                <h2 class="text-capitalize margin-bottom-small">用户中心</h2>
+                <p class="margin-bottom-small">99封情书网携全体工作人员祝您端午快乐感谢您的加入.</p>
+	   <p><a class="bttn bttn-small" href="{% url 'reg' %}">注册账户</a></p>      
+            </div>
+            <div class="col-sm-6">
+                <form class="contact-form" role="form" method="post" action="{% url 'signin' %}" >
+
+
+                {% csrf_token %}
+                                {% if messages %}
+                                     <div class="row">
+                        <div class="col-md-8">               
+	<div class="alert alert-danger">
+                    <div class="alert-icon"><i class="fa fa-info-circle"></i></div>
+                    {% for message in messages %}
+			<p class="text-{{ message.tags }}">
+				{{ message }}
+			 <span class="close pe-7s-close" data-dismiss="alert"></span></p>
+	         {% endfor %}
+             </div>
+              </div>
+               </div>
+	{% endif %}         
+{% csrf_token %}
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <input type="text" placeholder="Name *" id="username" name="username" >
+                        </div>
+                        <div class="col-md-8">
+                            <input id="password" name="password" type="password" placeholder="Password *">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="bttn bttn-border-black" type="submit">登录账户</button>
+                        </div>
+                    </div>
+                    <div class="wpcf7-response-output wpcf7-display-none"></div>
+                </form>
+            </div>
+        </div>
+
+{% endblock %}
+

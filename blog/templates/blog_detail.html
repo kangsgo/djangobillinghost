@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load custom_markdown %}
+{% block miaosu %}
+<section class="big-title">
+    <div class="container">
+        <div class="row row-xs-center">
+            <div class="col-xs-12 col-sm-6">
+                <h3>博客中心</h3>
+            </div>
+            <div class="col-xs-12 col-sm-6 text-sm-right">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block content %}
+<div class="page-content single-post padding-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="post blog-entry">
+
+
+
+
+<div class="post-thumb">
+                    </div>
+                    <div class="blog-entry-meta text-center">
+                        <span class="date">{{ post.date_time }}</span>
+                    </div>
+                    <h3 class="blog-entry-title text-center">{{ post.title }}</h3>
+
+                    <p>作者：admin</p>
+                    <p>{{ post.content|custom_markdown }}.</p>
+</div>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}

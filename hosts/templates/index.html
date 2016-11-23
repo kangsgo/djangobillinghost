@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block miaosu %}
+<div class="page-header">
+    <div class="page-header_content">
+        <div class="container">
+            <div class="row padding-y-100">
+                <div class="col-md-8 col-md-offset-2 text-center hover-line">
+                    <svg class="margin-bottom-50" viewBox="0 0 34 14" style="background-color:#ffffff00" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+                    x="0px" y="0px" width="34px" height="14px">
+                        <rect class="rect-1" x="-0.283" y="0" width="34" height="1.8263" fill="#00aeef"/>
+                        <rect class="rect-2" x="5.3838" y="6" width="22.6667" height="1.8261" fill="#00aeef"/>
+                        <rect class="rect-3" x="11.0503" y="12" width="11.3334" height="1.8261" fill="#00aeef"/>
+                    </svg>
+                    <h2 class="heading-1 text-inherit margin-bottom-30"><span class="primary-color">主机产品</span> 介绍</h2>
+                    <p>    99封情书一直致力于为广大独立博客用户提供优质实惠的专业博客主机服务，现已积累有超过四年的专业博客主机服务经验，成为众多独立博客们的主机首选。.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+            <div class="col-xs-12">
+                <form action="{% url 'add_cart'%}" method="post" id="subform{{ hosts.id }}" enctype="multipart/form-data">
+                {% csrf_token %}
+                    <div class="table-responsive table-shopping-cart">
+                        <table class="table-dn">
+                            <thead>
+                            <tr>
+                                <th>产品名称</th>
+                                <th>数据中心</th>
+                                <th>空间大小</th>
+                                <th>空间月流量</th>
+                                <th>空间价格</th>
+                                <th>购买链接</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% if prodcuts_list %}
+                            {% for hosts in prodcuts_list %}
+                            <tr>
+                                <td class="product-name">{{ hosts.hostname }}</td>
+                                <td class="product-name">{{ hosts.hostpackage }}</td>
+                                <td class="product-name">{{ hosts.hostsize }}MB</td>
+                                <td class="product-name">{{ hosts.hosttraffic }}MB</td>
+                                <td class="product-price">{{ hosts.hostprice }}元/年</td>
+                                <td class="product-name"><a class="bttn bttn-small" href="{{ hosts.id }}/add">立刻购买</a></td>
+                            </tr>
+                            {% endfor %}
+                            {% else %}
+                            <tr>
+                                <td colspan="6">没有产品</td>
+                            </tr>
+                            {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div> 
+{% endblock %}

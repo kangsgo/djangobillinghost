@@ -1,0 +1,145 @@
+{% load static %}
+<!doctype html>
+<html lang="" class="page-home home-07">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta baidu-gxt-verify-token="cbab73cea548163c7f959bcb21be035c">
+    <title>99封情书-最具情怀的主机网络</title>
+
+    <link rel="apple-touch-icon" href="{% static "apple-touch-icon.png" %}">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- Font -->
+    <link rel="stylesheet" href="{% static "components/pe-icon-7-stroke/css/pe-icon-7-stroke.css" %}" />
+    <link rel="stylesheet" href="{% static "components/font-awesome/css/font-awesome.min.css" %}" />
+
+    <!-- Vendors -->
+    <link rel="stylesheet" href="{% static "components/bootstrap/css/bootstrap.min.css" %}"/>
+    <link rel="stylesheet" href="{% static "components/lightgallery/css/lightgallery.min.css"%}" />
+    <link rel="stylesheet" href="{% static "components/lightslider/css/lightslider.min.css" %}"/>
+    <link rel="stylesheet" href="{% static "components/magnific-popup/magnific-popup.css"%}" />
+    <link rel="stylesheet" href="{% static "components/owl-carousel/owl.carousel.css" %}"/>
+    <link rel="stylesheet" href="{% static "components/slick/slick.css"%}" />
+    <link rel="stylesheet" href="{% static "components/slick/slick-theme.css"%}" />
+    <link rel="stylesheet" href="{% static "components/fullpage/jquery.fullpage.min.css"%}" />
+    <link rel="stylesheet" href="{% static "css/grid_flex.css"%}" />
+    <!-- /Vendors -->
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{% static "css/main.css"%}">
+    <!-- /Theme style -->
+
+</head>
+<body>
+
+<div id="main">
+    
+
+<!-- *********************** HEADER ************************ -->
+<header class="header">
+    <div class="container-fluid">
+        <div class="row row-xs-center">
+            <div class="col-xs-4 col-lg-1 logo">
+                <a class="hidden-lg" href="./index.html"><img src="{% static "images/logo.png" %}" alt="logo"></a>
+            </div>
+
+            <div class="col-lg-10 text-center hidden-xs hidden-sm hidden-md">
+                <!-- PRIMARY-MENU -->
+                <div id="primary-menu">
+                    <nav class="menu">
+                        <ul class="clearfix">
+                            <li><a href="/">网站首页</a></li>
+                            <li><a href="/hosts/">虚拟主机</a></li>
+                            <li><a href="/blog/">网站博客</a></li>
+                            <li class="no-before-after">
+                                <div class="logo padding-x-30">
+                                    <a href="./index.html"><img src="{% static "images/logo.png" %}" alt="logo"></a>
+                                </div>
+                            </li>
+                            <li><a href="/blog/3/">服务条款</a></li>
+                            <li><a href="/about_us/">关于我们</a></li>
+                            <li><a href="/accounts/">客户中心</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- /#primary-menu -->
+            </div>
+        </div>
+    </div>
+</header>
+{% block miaosu %}
+
+{% endblock %}
+
+<!-- // HEADER -->
+<div class="page-content">
+    <div class="container">
+        <div class="row">
+{% block content %}
+...
+{% endblock %}
+        </div>
+    </div>
+</div>
+
+<!-- *********************** FOOTER ************************ -->
+<footer class="site-footer bg-FFF">
+    <div class="container">
+        <div class="margin-bottom-90"></div>
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <aside class="widget footer-widget">
+                    <p class="widget-title"><a href="index.html"><img src="{% static "images/logo.png" %}" alt=""></a></p>
+                    <p>99FQS一直致力于为广大独立博客用户提供优质实惠的专业博客主机服务，现已积累有超过四年的专业博客主机服务经验，成为众多独立博客们的主机首选。.</p>
+                </aside>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="widget footer-widget">
+                    <h5 class="widget-title">咨询与服务</h5>
+                    <ul class="f-talk-to-us-list">
+                        <li><i class="pe-7s-call"></i>15320599954</li>
+                        <li><i class="pe-7s-mail-open-file"></i>kangsgo@hotmail.com</li>
+                        <li><i class="pe-7s-map-2"></i>武侯区洗面桥街21号附4号</li>
+                        <li>
+                            <div class="social-menu">
+                                <ul class="menu">
+                                    <li><a href="#">facebook</a></li>
+                                    <li><a href="#">twitter</a></li>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#">google plus</a></li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="margin-bottom-30"></div>
+    </div>
+</footer>
+<!-- /.site-footer -->
+<div class="copyright text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+				<p>网站备案号：<a href="http://www.miitbeian.gov.cn">蜀ICP备16001724号-2</a>,成都天佑软件开发工作室</p>
+                <p>© 99FQS Powered by <a href="http://dione.zooka.io/">Dione</a> & <a href="https://www.djangoproject.com/">Django</a> & <a href="http://www.python.org">Python</a>. All Right Reserved 2011-2016.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.copyright -->
+<!-- // FOOTER -->
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script src="{% static "components/jquery.min.js"%}"></script>
+
+<script src="{% static "scripts/main.js"%}"></script>
+</body>
+</html>

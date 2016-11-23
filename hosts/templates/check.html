@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="check-out">
+		<h1>购物车</h1>
+		<table >
+		  <tr>
+			<th>商品</th>
+			<th>数量</th>
+			<th>现价</th>
+			<th>小计</th>
+		</tr>
+		{% for item in cart.items %}
+		 <tr>
+			<td class="ring-in">{{ item.products.id }}
+			<div class="sed">
+				<h5>{{ item.products.hostname }}</h5>
+			</div>
+			<div class="clearfix"> </div></td>
+			<td>{{ item.quantity }}</td>
+			<td style="text-decoration:line-through">{{ item.products.hostprice }}元</td>
+			<td>{{ item.sum_price }}元</td>
+		</tr>
+		{% endfor %}
+		<tr>
+		<td><a href="{% url 'clean_cart'%}" class=" to-buy">清空购物车</a>
+		&nbsp;&nbsp;&nbsp;总价：{{ cart.total_price }}元</td>
+		</tr>
+	</table>
+	<div class="clearfix"> </div>
+	</div>
+</div>

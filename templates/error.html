@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block miaosu %}
+<section class="big-title">
+    <div class="container">
+        <div class="row row-xs-center">
+            <div class="col-xs-12 col-sm-6">
+                <h3>错误页面</h3>
+            </div>
+            <div class="col-xs-12 col-sm-6 text-sm-right">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="banner style-1">
+        <div class="container">
+            <div class="row row-xs-center">
+                <div class="col-md-8 col-md-offset-2 text-center col-xs-center">
+                    <h1>{{ title }}</h1>
+                    <p>{{ context }}</p>
+                    <a href="/" class="bttn bttn-border-black">回到首页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
